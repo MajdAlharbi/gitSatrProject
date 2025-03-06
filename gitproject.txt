@@ -1,0 +1,89 @@
+Microsoft Windows [Version 10.0.26100.3194]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\majd9> cd C:\Users\majd9\OneDrive\Desktop
+
+C:\Users\majd9\OneDrive\Desktop>mkdir new-project
+
+C:\Users\majd9\OneDrive\Desktop>cd new-project
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git init
+Initialized empty Git repository in C:/Users/majd9/OneDrive/Desktop/new-project/.git/
+
+C:\Users\majd9\OneDrive\Desktop\new-project>echo.> FileA.txt
+
+C:\Users\majd9\OneDrive\Desktop\new-project>
+C:\Users\majd9\OneDrive\Desktop\new-project>echo.>FileB.txt
+
+C:\Users\majd9\OneDrive\Desktop\new-project>dir
+ Volume in drive C is Windows-SSD
+ Volume Serial Number is 1A89-E2D3
+
+ Directory of C:\Users\majd9\OneDrive\Desktop\new-project
+
+03/06/2025  03:08 PM    <DIR>          .
+03/06/2025  03:08 PM    <DIR>          ..
+03/06/2025  03:08 PM                 2 FileA.txt
+03/06/2025  03:08 PM                 2 FileB.txt
+               2 File(s)              4 bytes
+               2 Dir(s)  353,513,271,296 bytes free
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git add FileA.txt FileB.txt
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   FileA.txt
+        new file:   FileB.txt
+
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git commit -m "add FileA & FileB"
+[master (root-commit) e377ee2] add FileA & FileB
+ 2 files changed, 2 insertions(+)
+ create mode 100644 FileA.txt
+ create mode 100644 FileB.txt
+
+C:\Users\majd9\OneDrive\Desktop\new-project>echo "Hello World" > FileA.txt
+
+C:\Users\majd9\OneDrive\Desktop\new-project>type FileA.txt
+"Hello World"
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git restore FileA.txt
+
+C:\Users\majd9\OneDrive\Desktop\new-project>echo "Hello World B" > FileB.txt
+
+C:\Users\majd9\OneDrive\Desktop\new-project>type FileB.txt
+"Hello World B"
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   FileB.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git add FileB.txt
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git commil -m "add txt"
+git: 'commil' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git log
+commit e377ee2e7f5473e15ace1c7fa08e1a5a2081e45d (HEAD -> master)
+Author: MajdAlharbi <majd9alharbi@gmail.com>
+Date:   Thu Mar 6 15:09:35 2025 +0300
+
+    add FileA & FileB
+
+C:\Users\majd9\OneDrive\Desktop\new-project>git log --oneline
+e377ee2 (HEAD -> master) add FileA & FileB
+
+C:\Users\majd9\OneDrive\Desktop\new-project>
